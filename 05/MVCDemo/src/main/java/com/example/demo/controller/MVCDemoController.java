@@ -2,6 +2,7 @@ package com.example.demo.controller;
 import com.example.demo.model.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.servlet.ModelAndView;
 /**
  * Author:   longzhonghua
@@ -21,5 +22,14 @@ public class MVCDemoController {
         //传递user实体对象给视图
         modelAndView.addObject("user",user);
         return modelAndView;
+    }
+
+    @GetMapping("user/{id}")
+    public ModelAndView getArticle(@PathVariable("id") Integer id){
+        User user = new User();
+        user.setId(id);
+        ModelAndView mav = new ModelAndView("mvcdemo");
+        mav.addObject("user",user);
+        return mav;
     }
 }

@@ -33,7 +33,7 @@ public class AopLog {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
     //线程局部的变量,解决多线程中相同变量的访问冲突问题。
     ThreadLocal<Long> startTime = new ThreadLocal<>();
-//定义切点
+    //定义切点
     @Pointcut("execution(public * com.example..*.*(..))")
     public void aopWebLog() {
     }

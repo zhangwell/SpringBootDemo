@@ -18,7 +18,7 @@ public class GetPersonInfoController {
     //获取配置文件中的name
     @Value("${name}")
     private String name;
-@GetMapping("/getage")
+    @GetMapping("/getage")
     public int getAge() {
         return age;
     }

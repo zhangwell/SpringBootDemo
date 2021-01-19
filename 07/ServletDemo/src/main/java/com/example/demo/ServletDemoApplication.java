@@ -15,10 +15,9 @@ public class ServletDemoApplication {
      */
     @Bean
     public ServletRegistrationBean ServletDemo01() {
-/**
- * Description: 注册ServletRegistrationBean获得相应的控制
- */
-
+        /**
+         * Description: 注册ServletRegistrationBean获得相应的控制
+         */
         return new ServletRegistrationBean(new ServletDemo01(), "/ServletDemo01/*");
     }
     public static void main(String[] args) {
